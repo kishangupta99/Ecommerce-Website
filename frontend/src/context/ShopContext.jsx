@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import { products } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -7,7 +8,7 @@ export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
 
-    const currency = '$';
+    const currency = '₹';
     const delivery_fee = 10;
     const navigate = useNavigate();
     const [search, setSearch] = useState('');
@@ -56,6 +57,7 @@ const ShopContextProvider = (props) => {
                         totalCount += cartItems[items][item];
                     }
                 } catch (error) {
+                    console.log(error);
                 }
             }
         }
@@ -72,6 +74,7 @@ const ShopContextProvider = (props) => {
                         totalAmount += itemInfo.price * cartItems[items][item];
                     }
                 } catch (error) {
+                    console.log(error);
                 }
             }
         }
@@ -96,7 +99,9 @@ const ShopContextProvider = (props) => {
         </ShopContext.Provider>
     )
 
-
 }
+ShopContextProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 export default ShopContextProvider;
