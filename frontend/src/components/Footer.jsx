@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import { assets } from '../assets/assets'
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
 
         <div>
           <img className='mb-5 w-32' src={assets.logo} alt="" />
-          <p className='w-full md:w-2/3 text-gray-600'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p className='w-full md:w-2/3 text-gray-600'>© 2025 [Forever]. Premium fashion for effortless style. New arrivals weekly. Free shipping on orders over [₹5000]. Easy returns. 100% secure checkout. Stay connected: [instagram.com]. Need help? Contact: [Email.com] | [+91-85486256]. Privacy | Terms | FAQs.</p>
         </div>
 
         <div>

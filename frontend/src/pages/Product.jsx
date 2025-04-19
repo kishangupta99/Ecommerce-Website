@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
@@ -23,7 +23,7 @@ const Product = () => {
     })
 
   }
-
+  
   useEffect(() => {
     fetchProductData()
   }, [productId])
@@ -79,6 +79,9 @@ const Product = () => {
 
       </div>
 
+
+                  {/* ------Description And Reviews System */}
+                  
       <div className='mt-20'>
         <div className='flex'>
           <b className='border px-5 py-3 text-sm'>Description</b>

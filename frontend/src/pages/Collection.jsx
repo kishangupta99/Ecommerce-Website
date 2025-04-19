@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Title from '../components/Title'
 import ProductItem from '../components/ProductItem'
 import { ShopContext } from '../context/ShopContext'
@@ -10,7 +10,7 @@ const Collection = () => {
 
   const [filterProducts, setFilterProducts] = useState([]);
   const [category, setCategory] = useState([]);
-  const [subCategory, setSubCategory] = useState([]);
+  const [subCategory, setSubCategory] = useState([]); 
   const [showFilter, setShowFilter] = useState(false);
   const [sortType, setSortType] = useState('relavent')
 
