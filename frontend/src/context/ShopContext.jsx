@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import PropTypes from "prop-types";
 import { products } from "../assets/assets";
 import { useNavigate } from "react-router-dom";

@@ -3,6 +3,9 @@ import { assets } from '../assets/assets'
 import { Link, NavLink } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 
+
+
+
 const Navbar = () => {
 
     const [visible, setVisble] = useState(false)
@@ -36,7 +39,7 @@ const Navbar = () => {
             <div className='flex items-center gap-6'>
                 <img onClick={() => { setShowSearch(true); navigate('/collection') }} className='w-5 cursor-pointer' src={assets.search_icon} alt="" />
                 <div className='group relative'>
-                    <img onClick={() => { navigate('/login') }} className='w-5 cursor-pointer' src={assets.profile_icon} alt="" />
+                  <Link to='/login'> <img  className='w-5 cursor-pointer' src={assets.profile_icon} alt="" /></Link> 
 
                     {/* Dropdown Menu */}
                     <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>

@@ -1,4 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import PropTypes from 'prop-types';
 import Title from './Title'
 import { ShopContext } from '../context/ShopContext';
 import ProductItem from './ProductItem';
@@ -9,7 +10,7 @@ const RelatedProducts = ({ category, subCategory }) => {
 
     const { products } = useContext(ShopContext)
 
-    useEffect(() => {
+    useEffect(() => {  
 
         if (products.length > 0) {
             let productsCopy = products.slice()
@@ -36,4 +37,8 @@ const RelatedProducts = ({ category, subCategory }) => {
     )
 }
 
+RelatedProducts.propTypes = {
+    category: PropTypes.string.isRequired, // category must be a string and is required
+    subCategory: PropTypes.string.isRequired // subCategory must be a string and is required
+};
 export default RelatedProducts

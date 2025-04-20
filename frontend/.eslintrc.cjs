@@ -1,6 +1,9 @@
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
+  "rules": {
+  "react/no-unescaped-entities": "off"
+},
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -19,3 +22,4 @@ module.exports = {
     ],
   },
 }
+
