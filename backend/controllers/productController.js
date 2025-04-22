@@ -12,12 +12,6 @@ const addProduct = async (req, res) => {
         const image3 = req.files.image3 && req.files.image3[0]
         const image4 = req.files.image4 && req.files.image4[0]
 
-        console.log(name, description, price, category, subCategory, sizes, bestseller);
-        console.log('image1', image1);
-        console.log('image2', image2);        
-        console.log('image3', image3);        
-        console.log('image4', image4);
-
         
         const images = [image1, image2, image3, image4].filter((item) => item !== undefined)
 
@@ -47,11 +41,13 @@ const addProduct = async (req, res) => {
 
         res.json({ success: true, message: "Product Added" })
 
+
     } catch (error) {
         console.log(error)
         res.json({ success: false, message: error.message })
     }
 }
+
 
 // function for list product
 const listProducts = async (req, res) => {
