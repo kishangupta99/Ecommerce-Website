@@ -1,10 +1,11 @@
-import React from 'react'
+//import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import { backendUrl, currency } from '../App'
 import { toast } from 'react-toastify'
 import { assets } from '../assets/assets'
+import PropTypes from 'prop-types'
 
 const Orders = ({ token }) => {
 
@@ -94,6 +95,10 @@ const Orders = ({ token }) => {
       </div>
     </div>
   )
+}
+
+Orders.propTypes = {
+  token: PropTypes.string.isRequired
 }
 
 export default Orders

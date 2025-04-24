@@ -1,5 +1,6 @@
-import React from 'react'
+//import React from 'react'
 import {assets} from '../assets/assets'
+import PropTypes from 'prop-types'
 
 const Navbar = ({setToken}) => {
   return (
@@ -10,4 +11,7 @@ const Navbar = ({setToken}) => {
   )
 }
 
+Navbar.propTypes = {
+    setToken: PropTypes.func
+}
 export default Navbar
