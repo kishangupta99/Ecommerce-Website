@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
+import propsTypes from 'prop-types'
 
 export const ShopContext = createContext();
 
@@ -63,6 +64,8 @@ const ShopContextProvider = (props) => {
                         totalCount += cartItems[items][item];
                     }
                 } catch (error) {
+                    console.log(error)
+                    toast.error(error.message)
 
                 }
             }
@@ -101,6 +104,8 @@ const ShopContextProvider = (props) => {
                         totalAmount += itemInfo.price * cartItems[items][item];
                     }
                 } catch (error) {
+                    console.log(error)
+                    toast.error(error.message)
 
                 }
             }
@@ -168,4 +173,7 @@ const ShopContextProvider = (props) => {
 
 }
 
+ShopContextProvider.propTypes = {
+    children: propsTypes.node.isRequired
+}
 export default ShopContextProvider;
