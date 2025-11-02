@@ -11,7 +11,7 @@ It provides all essential features of a modern online store — from product bro
 
 | Layer | Technologies |
 |--------|---------------|
-| **Frontend** | React.js, Redux Toolkit, Tailwind CSS |
+| **Frontend** | React.js, Context-API, Tailwind CSS |
 | **Backend** | Node.js, Express.js |
 | **Database** | MongoDB, Mongoose |
 | **Authentication** | JWT (JSON Web Tokens) |
